@@ -1,0 +1,12 @@
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.ico
+*.zip
+node_modules/
+
