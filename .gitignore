@@ -9,4 +9,5 @@
 *.ico
 *.zip
 node_modules/
+docs/
 
