@@ -1,6 +1,14 @@
 title: 瓜沥发展建议
-description: 关于瓜沥发展的公开建议与参考资料
+tagline: 面向瓜沥发展的开放建议与参考资料
+description: 一个公开、清晰、便于人和 AI 阅读的瓜沥发展建议网站。
+url: https://stargaze1001.github.io
+baseurl: ""
 lang: zh-CN
 timezone: Asia/Shanghai
 markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
