@@ -6,9 +6,13 @@ baseurl: ""
 lang: zh-CN
 timezone: Asia/Shanghai
 markdown: kramdown
-theme: minima
+remote_theme: "daattali/beautiful-jekyll@6.0.1"
+
+site-css:
+  - /assets/css/style.css
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
