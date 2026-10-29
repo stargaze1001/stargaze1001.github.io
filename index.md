@@ -1,7 +1,5 @@
 ---
-layout: page
-title: 瓜沥发展建议
-permalink: /
+layout: home
 ---
 
 ## 内容目录
