@@ -4,7 +4,7 @@ description: 一个公开、清晰、便于人和 AI 阅读的瓜沥发展建议
 url: https://stargaze1001.github.io
 baseurl: ""
 navbar-links:
-  关于: "about"
+  关于: "/about"
 lang: zh-CN
 timezone: Asia/Shanghai
 markdown: kramdown
