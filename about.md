@@ -2,11 +2,12 @@
 layout: page
 title: 关于
 permalink: /about/
+css: "/assets/css/about.css"
 ---
 
-<div class="about-page" markdown="1">
+<div class="about-note" markdown="1">
 
-[← 返回首页](/)
+<a class="about-back" href="/">← 返回首页</a>
 
 很多时候，一个想法只是在自在、轻松时突然冒出来。过去我常让这些不成型的好点子悄悄散去，现在开始尝试借助 AI 把零散的关键词整理成更有逻辑的策划方案。
 
