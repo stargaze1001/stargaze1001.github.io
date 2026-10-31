@@ -456,38 +456,3 @@ body {
     transition: none;
   }
 }
-
-.about-page {
-  max-width: 46rem;
-  margin: 0 auto;
-  padding: 0.5rem clamp(0.75rem, 3vw, 1.5rem) 2rem;
-  color: #3f4a47;
-  font-size: 1.08rem;
-  line-height: 1.9;
-}
-
-.about-page p + p {
-  margin-top: 1.4rem;
-}
-
-.about-page p:first-child {
-  margin-bottom: 1.9rem;
-}
-
-.about-page p:first-child a {
-  color: var(--guali-green);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.about-page p:first-child a:hover,
-.about-page p:first-child a:focus {
-  color: var(--guali-green-dark);
-  text-decoration: underline;
-}
-
-.page-heading h1 {
-  color: #3f4a47;
-  font-size: 1.35rem;
-  text-align: center;
-}
