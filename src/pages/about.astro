@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="关于">
+  <article class="about">
+    <p>很多时候，一个想法只是在自在、轻松时突然冒出来。过去我常让这些不成型的好点子悄悄散去，现在开始尝试借助 AI 把零散的关键词整理成更有逻辑的策划方案。</p>
+    <p>在信息时代，我希望用一种自主、克制、也更适合长期保存的方式展示自己的思考。初次接触 Agent 时，我感到震惊，也有些庆幸；而 GitHub 公益普惠的共享精神，则让我更加确信，这些想法值得被公开、被分享、被持续迭代。</p>
+  </article>
+</BaseLayout>
+
+<style>
+  .about {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 0;
+    color: var(--color-text);
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  .about p + p {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  category: string;
+  summary?: string;
+  href: string;
+}
+
+const { title, date, category, summary, href } = Astro.props;
+---
+
+<a href={href} style="display: block; padding: 1.2rem 0; border-bottom: 1px solid var(--color-border); text-decoration: none; color: inherit;">
+  <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">{title}</h3>
+  <div style="color: var(--color-muted); font-size: 0.85rem; margin-bottom: 0.4rem;">{date} · {category}</div>
+  {summary && <p style="font-size: 0.95rem; color: var(--color-muted);">{summary}</p>}
+</a>

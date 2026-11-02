@@ -1,0 +1,37 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  date: string;
+  category: string;
+  tags?: string[];
+}
+
+const { title, date, category, tags } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <article>
+    <header style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border);">
+      <h1 style="font-size: 1.6rem; margin-bottom: 0.5rem;">{title}</h1>
+      <div style="color: var(--color-muted); font-size: 0.9rem;">
+        <time>{date}</time> · <span>{category}</span>
+        {tags && tags.length > 0 && ' · ' + tags.join(' / ')}
+      </div>
+    </header>
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+  <style>
+    .post-content { line-height: 2; }
+    .post-content h2 { font-size: 1.3rem; margin: 2rem 0 1rem; }
+    .post-content h3 { font-size: 1.1rem; margin: 1.5rem 0 0.8rem; }
+    .post-content p { margin-bottom: 1rem; }
+    .post-content ul, .post-content ol { margin: 1rem 0; padding-left: 1.5rem; }
+    .post-content li { margin-bottom: 0.4rem; }
+    .post-content blockquote { border-left: 3px solid var(--color-border); padding-left: 1rem; color: var(--color-muted); margin: 1rem 0; }
+    .post-content code { background: #eee; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</BaseLayout>

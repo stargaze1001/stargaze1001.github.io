@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="首页">
+  <div class="home-grid">
+    <section class="intro">
+      <p class="eyebrow">GUALI IDEAS</p>
+      <h1>瓜沥建议</h1>
+      <p class="subtitle">一个公开、克制、对 AI 友好的瓜沥本地发展与文化生活的建议档案馆。</p>
+      <p class="intro-text">
+        我们致力于以理性的视角，发掘江南小镇与前沿科技共生共荣的无限可能，把零散的想法整理成清晰、可讨论、可行动的发展建议。
+      </p>
+    </section>
+
+    <section class="timeline" aria-label="策划方案">
+      <a class="timeline-item" href="/ai-short-drama">
+        <article>
+          <h2>瓜沥 AI 短剧大赛策划方案</h2>
+          <div class="meta">
+            <time>2026-11-01</time>
+            <span class="tag">发展建议</span>
+          </div>
+          <p>以瓜沥地方故事为素材，举办 AI 短剧创作大赛，吸引年轻创作者关注本地文化。</p>
+        </article>
+      </a>
+
+      <a class="timeline-item" href="/culture-prosperity">
+        <article>
+          <h2>瓜沥文化共富联动策划方案</h2>
+          <div class="meta">
+            <time>2026-11-01</time>
+            <span class="tag">发展建议</span>
+          </div>
+          <p>以瓜沥本地文化资源为纽带，联动周边社区开展共富主题文化活动。</p>
+        </article>
+      </a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .home-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 5rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 24px;
+  }
+
+  .intro {
+    position: sticky;
+    top: 120px;
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    color: var(--color-secondary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  .intro h1 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+  }
+
+  .subtitle {
+    max-width: 460px;
+    margin: 24px 0 0;
+    color: var(--color-text);
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  .intro-text {
+    max-width: 460px;
+    margin: 24px 0 0;
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.95;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2.25rem;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: var(--color-border);
+  }
+
+  .timeline-item {
+    position: relative;
+    display: block;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    margin-bottom: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -2.25rem;
+    top: 2rem;
+    width: 2.25rem;
+    height: 1px;
+    background: var(--color-border);
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    left: calc(-2.25rem - 5px);
+    top: calc(2rem - 5px);
+    width: 11px;
+    height: 11px;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-bg);
+    border-radius: 50%;
+  }
+
+  .timeline-item:hover {
+    background: rgba(0, 43, 91, 0.04);
+  }
+
+  .timeline-item h2 {
+    margin: 0 0 12px;
+    color: var(--color-primary);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: var(--color-muted);
+    font-size: 0.85rem;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    color: var(--color-primary);
+    background: rgba(74, 143, 231, 0.12);
+    border-radius: 999px;
+    font-size: 0.75rem;
+  }
+
+  .timeline-item p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.98rem;
+    line-height: 1.85;
+  }
+
+  @media (max-width: 800px) {
+    .home-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 2.5rem 20px;
+    }
+
+    .intro {
+      position: static;
+    }
+
+    .timeline {
+      padding-left: 1.75rem;
+    }
+
+    .timeline-item::before {
+      left: -1.75rem;
+      width: 1.75rem;
+    }
+
+    .timeline-item::after {
+      left: calc(-1.75rem - 5px);
+    }
+  }
+</style>

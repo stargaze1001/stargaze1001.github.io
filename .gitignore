@@ -1,0 +1,11 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.venv
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.cache
+.astro/
+文案备份/
