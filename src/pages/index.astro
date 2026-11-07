@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts')).sort((a, b) =>
+  b.data.date.localeCompare(a.data.date)
+);
 ---
 
 <BaseLayout title="首页">
@@ -14,16 +19,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <section class="timeline" aria-label="策划方案">
-      <a class="timeline-item" href="/culture-prosperity">
-        <article>
-          <h2>瓜沥文化共富联动策划方案</h2>
-          <div class="meta">
-            <time>2026-11-01</time>
-            <span class="tag">发展建议</span>
-          </div>
-          <p>以瓜沥本地文化资源为纽带，联动周边社区开展共富主题文化活动。</p>
-        </article>
-      </a>
+      {posts.map((post) => (
+        <a class="timeline-item" href={`/posts/${post.id.replace(/\.md$/, '')}`}>
+          <article>
+            <h2>{post.data.title}</h2>
+            <div class="meta">
+              <time>{post.data.date}</time>
+              <span class="tag">{post.data.category}</span>
+            </div>
+            {post.data.summary && <p>{post.data.summary}</p>}
+          </article>
+        </a>
+      ))}
     </section>
   </div>
 </BaseLayout>
